@@ -37,6 +37,27 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Users',
+    'UserRole',
+    'UserOrder',
+    'UserCard',
+    'UserAddress',
+    'Role',
+    'Restaurant',
+    'RestaurantCategory',
+    'ReccomendedFood',
+    'Order',
+    'HouseType',
+    'Food',
+    'Courier',
+    'Country',
+    'City',
+    'Category',
+    'Card',
+    'BranchAddress',
+    'Branch',
+    'Basket',
+    'Address'
 ]
 
 MIDDLEWARE = [
