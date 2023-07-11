@@ -31,7 +31,7 @@ def food_edit(request, pk):
             food.save()
             return redirect('food_detail', pk=food.pk)
     else:
-        form = foodForm(instance=food)
+        form = FoodForm(instance=food)
     return render(request, 'foods/food_edit.html', {'form': form})
 
 def food_delete(request, pk):
