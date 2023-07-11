@@ -26,5 +26,6 @@ urlpatterns = [
     path('baskets/', include('Basket.urls')),
     path('foods/', include('Food.urls')),
     path('country/', include('Country.urls')),
-    path('city/', include('City.urls'))
+    path('city/', include('City.urls')),
+    path('courier/', include('Courier.urls'))
 ]
