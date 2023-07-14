@@ -32,5 +32,6 @@ urlpatterns = [
     path('branchAddress/', include('BranchAddress.urls')),
     path('cards/', include('Card.urls')),
     path('categories/', include('Category.urls')),
-    path('houseTypes/', include('HouseType.urls'))
+    path('houseTypes/', include('HouseType.urls')),
+    path('reccomendedFoods/', include('ReccomendedFood.urls'))
 ]
