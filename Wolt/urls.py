@@ -28,5 +28,6 @@ urlpatterns = [
     path('country/', include('Country.urls')),
     path('city/', include('City.urls')),
     path('courier/', include('Courier.urls')),
-    path('branch/', include('Branch.urls'))
+    path('branch/', include('Branch.urls')),
+    path('branchAddress/', include('BranchAddress.urls'))
 ]
