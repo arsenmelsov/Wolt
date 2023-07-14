@@ -27,5 +27,6 @@ urlpatterns = [
     path('foods/', include('Food.urls')),
     path('country/', include('Country.urls')),
     path('city/', include('City.urls')),
-    path('courier/', include('Courier.urls'))
+    path('courier/', include('Courier.urls')),
+    path('branch/', include('Branch.urls'))
 ]
