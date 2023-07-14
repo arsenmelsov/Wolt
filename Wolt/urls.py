@@ -25,10 +25,11 @@ urlpatterns = [
     path('addresses/', include('Address.urls')),
     path('baskets/', include('Basket.urls')),
     path('foods/', include('Food.urls')),
-    path('country/', include('Country.urls')),
-    path('city/', include('City.urls')),
+    path('countries/', include('Country.urls')),
+    path('cities/', include('City.urls')),
     path('courier/', include('Courier.urls')),
-    path('branch/', include('Branch.urls')),
+    path('branches/', include('Branch.urls')),
     path('branchAddress/', include('BranchAddress.urls')),
-    path('card/', include('Card.urls'))
+    path('cards/', include('Card.urls')),
+    path('categories/', include('Category.urls'))
 ]
