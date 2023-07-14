@@ -5,11 +5,11 @@ from .forms import CardForm
 
 def card_list(request):
     cards = Card.objects.all()
-    return render(request, 'cities/card_list.html', {'cards': cards})
+    return render(request, 'cards/card_list.html', {'cards': cards})
 
 def card_detail(request, pk):
     card = get_object_or_404(card, pk=pk)
-    return render(request, 'cities/card_detail.html', {'card': card})
+    return render(request, 'cards/card_detail.html', {'card': card})
 
 def card_new(request):
     if request.method == "POST":
@@ -20,7 +20,7 @@ def card_new(request):
             return redirect('card_detail', pk=card.pk)
     else:
         form = CardForm()
-    return render(request, 'cities/card_edit.html', {'form': form})
+    return render(request, 'cards/card_edit.html', {'form': form})
 
 def card_edit(request, pk):
     card = get_object_or_404(card, pk=pk)
@@ -32,11 +32,11 @@ def card_edit(request, pk):
             return redirect('card_detail', pk=card.pk)
     else:
         form = CardForm(instance=card)
-    return render(request, 'cities/card_edit.html', {'form': form})
+    return render(request, 'cards/card_edit.html', {'form': form})
 
 def card_delete(request, pk):
     card = get_object_or_404(card, pk=pk)
     if request.method == "POST":
         card.delete()
         return redirect('card_list')
-    return render(request, 'cities/card_confirm_delete.html', {'card': card})
+    return render(request, 'cards/card_confirm_delete.html', {'card': card})

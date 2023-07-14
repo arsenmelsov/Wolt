@@ -9,7 +9,7 @@ def country_list(request):
 
 def country_detail(request, pk):
     country = get_object_or_404(country, pk=pk)
-    return render(request, 'country/country_detail.html', {'country': country})
+    return render(request, 'countries/country_detail.html', {'country': country})
 
 def country_new(request):
     if request.method == "POST":

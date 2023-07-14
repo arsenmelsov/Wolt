@@ -9,7 +9,7 @@ def branch_list(request):
 
 def branch_detail(request, pk):
     branch = get_object_or_404(branch, pk=pk)
-    return render(request, 'branch/branch_detail.html', {'branch': branch})
+    return render(request, 'branches/branch_detail.html', {'branch': branch})
 
 def branch_new(request):
     if request.method == "POST":

@@ -10,7 +10,7 @@ def order_list(request):
 
 def order_detail(request, pk):
     order = get_object_or_404(order, pk=pk)
-    return render(request, 'order/order_detail.html', {'order': order})
+    return render(request, 'orders/order_detail.html', {'order': order})
 
 def order_new(request):
     if request.method == "POST":

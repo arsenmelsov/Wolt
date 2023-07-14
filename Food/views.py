@@ -9,7 +9,7 @@ def food_list(request):
 
 def food_detail(request, pk):
     food = get_object_or_404(food, pk=pk)
-    return render(request, 'food/food_detail.html', {'food': food})
+    return render(request, 'foods/food_detail.html', {'food': food})
 
 def food_new(request):
     if request.method == "POST":

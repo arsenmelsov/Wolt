@@ -9,7 +9,7 @@ def branchAddress_list(request):
 
 def branchAddress_detail(request, pk):
     branchAddress = get_object_or_404(branchAddress, pk=pk)
-    return render(request, 'branchAddress/branchAddress_detail.html', {'branchAddress': branchAddress})
+    return render(request, 'branchAddresses/branchAddress_detail.html', {'branchAddress': branchAddress})
 
 def branchAddress_new(request):
     if request.method == "POST":

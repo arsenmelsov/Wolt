@@ -9,7 +9,7 @@ def address_list(request):
 
 def address_detail(request, pk):
     address = get_object_or_404(address, pk=pk)
-    return render(request, 'address/address_detail.html', {'address': address})
+    return render(request, 'addresses/address_detail.html', {'address': address})
 
 def address_new(request):
     if request.method == "POST":
@@ -20,7 +20,7 @@ def address_new(request):
             return redirect('address_detail', pk=address.pk)
     else:
         form = AddressForm()
-    return render(request, 'addresss/address_edit.html', {'form': form})
+    return render(request, 'addresses/address_edit.html', {'form': form})
 
 def address_edit(request, pk):
     address = get_object_or_404(address, pk=pk)
@@ -32,11 +32,11 @@ def address_edit(request, pk):
             return redirect('address_detail', pk=address.pk)
     else:
         form = AddressForm(instance=address)
-    return render(request, 'addresss/address_edit.html', {'form': form})
+    return render(request, 'addresses/address_edit.html', {'form': form})
 
 def address_delete(request, pk):
     address = get_object_or_404(address, pk=pk)
     if request.method == "POST":
         address.delete()
         return redirect('address_list')
-    return render(request, 'addresss/address_confirm_delete.html', {'address': address})
+    return render(request, 'addresses/address_confirm_delete.html', {'address': address})

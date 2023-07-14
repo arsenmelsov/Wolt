@@ -9,7 +9,7 @@ def courier_list(request):
 
 def courier_detail(request, pk):
     courier = get_object_or_404(courier, pk=pk)
-    return render(request, 'courier/courier_detail.html', {'courier': courier})
+    return render(request, 'couriers/courier_detail.html', {'courier': courier})
 
 def courier_new(request):
     if request.method == "POST":

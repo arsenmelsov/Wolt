@@ -9,7 +9,7 @@ def basket_list(request):
 
 def basket_detail(request, pk):
     basket = get_object_or_404(basket, pk=pk)
-    return render(request, 'basket/basket_detail.html', {'basket': basket})
+    return render(request, 'baskets/basket_detail.html', {'basket': basket})
 
 def basket_new(request):
     if request.method == "POST":

@@ -9,7 +9,7 @@ def user_list(request):
 
 def user_detail(request, pk):
     user = get_object_or_404(User, pk=pk)
-    return render(request, 'user/user_detail.html', {'user': user})
+    return render(request, 'users/user_detail.html', {'user': user})
 
 def user_new(request):
     if request.method == "POST":
