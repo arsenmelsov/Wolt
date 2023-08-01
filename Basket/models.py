@@ -1,5 +1,6 @@
 from django.db import models
 from Courier.models import Courier
+from Users.models import User
 import uuid
 
 class Basket(models.Model):
@@ -9,3 +10,4 @@ class Basket(models.Model):
     rating = models.FloatField()
     payment_status = models.BooleanField(null=False)
     courier = models.ForeignKey(Courier, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
