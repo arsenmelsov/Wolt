@@ -11,3 +11,6 @@ class Address(models.Model):
     entrance = models.IntegerField(blank=True, null=True)
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
+
